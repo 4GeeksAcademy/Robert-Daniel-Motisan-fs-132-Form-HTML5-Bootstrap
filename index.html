@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- container para poder ponerla en medio -->
+    <div class="min-vh-100 d-flex align-items-center justify-content-center bg-light px-3 py-4">
+        <!-- card for payment -->
+        <div class="card border-secondary w-100"
+            style="max-width: 60rem; min-height: 30rem; max-height: 90vh; overflow-y: auto;">
+            <div class="card-header">
+                <p class="fw-bold fs-4 m-0">Payment form example</p>
+            </div>
+            <div class="card-body text-secondary">
+                <!-- warning -->
+                <div class="alert alert-danger p-2" role="alert">
+                    Some fields are missing
+                </div>
+                <!-- form full -->
+                <form class="row g-3">
+                    <!-- first 3 -->
+                    <div class="col-md-5">
+                        <label for="inputcard" class="form-label">Card #</label>
+                        <input type="number" class="form-control" id="inputcard" placeholder="XXXXXXXXXXXXXXX">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputcvc" class="form-label">CVC #</label>
+                        <input type="number" class="form-control" id="inputcvc" placeholder="0000">
+                    </div>
+                    <!-- Money type diferente -->
+                    <div class="col-md-1 pe-0 mt-5" style="width: auto;">
+                        <select class="form-select" id="inputGroupSelect04"
+                            aria-label="Example select with button addon">
+                            <option selected></option>
+                            <option value="1">$</option>
+                            <option value="2">£</option>
+                            <option value="3">€</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 ms-0 ps-0">
+                        <label for="inputAmount" class="form-label">Amount</label>
+                        <input type="number" class="form-control" id="inputAmount">
+                    </div>
+                    <!-- second 2 -->
+                    <div class="col-6">
+                        <label for="inputFirstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="inputFirstName">
+                    </div>
+                    <div class="col-6">
+                        <label for="inputLastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="inputLastName">
+                    </div>
+                    <!-- third 3 -->
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="inputState" class="form-label">State</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Pick a state</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="inputPostalCode" class="form-label">Postal Code</label>
+                        <input type="text" class="form-control" id="inputPostalCode">
+                    </div>
+                    <!-- last (radio-messange) -->
+                    <div class="col-6">
+                        <label class="form-label d-block mb-4">We accept:</label>
+                        <span class="d-block-inline bg-secondary text-white rounded p-2 mt-1 gap-3">
+
+                            <div class="form-check form-check-inline" id="cardpayment">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1"><i
+                                        class="fa-brands fa-cc-mastercard"></i></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio2"><i
+                                        class="fa-brands fa-cc-visa"></i></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option3">
+                                <label class="form-check-label" for="inlineRadio3"><i
+                                        class="fa-brands fa-paypal"></i></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option4">
+                                <label class="form-check-label" for="inlineRadio4"><i
+                                        class="fa-brands fa-apple-pay"></i></label>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="floatingTextarea2">Message</label>
+                        <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Add any notes here.</label>
+                    </div>
+                </form>
+            </div>
+            <!-- footer -->
+            <div class="card-footer">
+                <form>
+                    <div class="col-12 d-flex justify-content-end">
+                        <button type="submit" class="btn btn-secondary me-2">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
